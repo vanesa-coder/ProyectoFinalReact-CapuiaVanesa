@@ -1,0 +1,17 @@
+.carrito {
+    margin-top: 3px;
+    margin-right: 10px;
+    font-size: 30px;
+    color: white;
+}
+.boton{
+    margin-right: 2rem;
+    background-color: #c94d62;
+    border-radius: 50%;
+    border: #c94d62 2px solid;
+    width: 30px;
+    color: white;
+  }
+.divCarrito{
+    display: flex;
+}

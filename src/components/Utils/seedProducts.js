@@ -1,0 +1,172 @@
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../config/firebaseConfig";
+
+
+const products = [
+    {
+        category: "anillos",
+        img: "https://i.imgur.com/LR3v70n.jpg",
+        name: "Anillo Bvlgari",
+        description: "Anillo Bvlgari de acero quirurgico",
+        precio: 3700,
+        stock: 10,
+    },
+    {
+        category: "anillos",
+        img: "https://i.imgur.com/By8vASJ.jpg",
+        name: "Anillo Corazón",
+        description: "Anillo Corazón de acero quirurgico",
+        precio: 3500,
+        stock: 15,
+    },
+    {
+        category: "anillos",
+        img: "https://i.imgur.com/5Uid9k8.jpg",
+        name: "Anillo cruz del equilibrio",
+        description: "Anillo de acero quirurgico",
+        precio: 3500,
+        stock: 8,
+    },
+    {
+        category: "anillos",
+        img: "https://i.imgur.com/PLUMpi4.jpg",
+        name: "Anillo Nudo de bruja",
+        description: "Anillo de acero quirurgico",
+        precio: 3200,
+        stock: 7,
+    },
+    {
+        category: "anillos",
+        img: "https://i.imgur.com/WZIfLMb.jpg",
+        name: "Anillo Serpent",
+        description: "Anillo de acero quirurgico",
+        precio: 3200,
+        stock: 9,
+    },
+    {
+        category: "aros",
+        img: "https://i.imgur.com/lcRRPHo.jpg",
+        name: "Aros Argolla Irregular",
+        description: "Aros de acero quirurgico",
+        precio: 2500,
+        stock: 11,
+    },
+    {
+        category: "aros",
+        img: "https://i.imgur.com/C95r7Jb.jpg",
+        name: "Aros Corazón",
+        description: "Aros de acero quirurgico",
+        precio: 2600,
+        stock: 10
+    },
+    {
+        category: "aros",
+        img: "https://i.imgur.com/7M1B0Vi.jpg",
+        name: "Aros Estrellas",
+        description: "Aros de acero quirurgico",
+        precio: 2800,
+        stock: 14,
+    },
+    {
+        category: "aros",
+        img: "https://i.imgur.com/40UqSUA.jpg",
+        name: "Aros Geometricos",
+        description: "Aros de acero quirurgico",
+        precio: 3100,
+        stock: 7,
+    },
+    {
+        category: "aros",
+        img: "https://i.imgur.com/H5ugxVp.jpg",
+        name: "Aros Perlas",
+        description: "Aros de acero quirurgico",
+        precio: 2300,
+        stock: 17,
+    },
+    {
+        category: "cadenas",
+        img: "https://i.imgur.com/dsADBqm.jpg",
+        name: "Cadena Alas",
+        description: "Cadena con dije de acero quirurgico",
+        precio: 4600,
+        stock: 5,
+    },
+    {
+        category: "cadenas",
+        img: "https://i.imgur.com/C2b2CGO.jpg",
+        name: "Cadena Corazón",
+        description: "Cadena con dije de acero quirurgico",
+        precio: 4900,
+        stock: 12,
+    },
+    {
+        category: "cadenas",
+        img: "https://i.imgur.com/fXR08T1.jpg",
+        name: "Cadena Colibrí",
+        description: "Cadena con dije de acero quirurgico",
+        precio: 5500,
+        stock: 3,
+    },
+    {
+        category: "cadenas",
+        img: "https://i.imgur.com/JoQ1rt7.jpg",
+        name: "Cadena Luna",
+        description: "Cadena con dije de acero quirurgico",
+        precio: 5600,
+        stock: 4,
+    },
+    {
+        category: "cadenas",
+        img: "https://i.imgur.com/gMTPry1.jpg",
+        name: "Cadena Manito de Fátima",
+        description: "Cadena con dije de acero quirurgico",
+        precio: 5900,
+        stock: 14,
+    },
+    {
+        category: "pulseras",
+        img: "https://i.imgur.com/VKuSGvb.jpg",
+        name: "Pulsera Manito de Fátima",
+        description: "Pulsera con dije de acero quirurgico",
+        precio: 4900,
+        stock: 16,
+    },
+    {
+        category: "pulseras",
+        img: "https://i.imgur.com/4xnVCGl.jpg",
+        name: "Pulsera Árbol de la vida",
+        description: "Pulsera con dije de acero quirurgico",
+        precio: 4900,
+        stock: 9,
+    },
+    {
+        category: "pulseras",
+        img: "https://i.imgur.com/A6cmHWO.jpg",
+        name: "Pulsera Dijes",
+        description: "Pulsera con dijes de acero quirurgico",
+        precio: 4500,
+        stock: 6,
+    },
+    {
+        category: "pulseras",
+        img: "https://i.imgur.com/s9C6cPZ.png",
+        name: "Pulsera Fígaro",
+        description: "Pulsera de acero quirurgico",
+        precio: 3800,
+        stock: 11,
+    },
+    {
+        category: "pulseras",
+        img: "https://i.imgur.com/QOWetnF.jpg",
+        name: "Pulsera Infinito",
+        description: "Pulsera con dije de acero quirurgico",
+        precio: 5100,
+        stock: 5,
+    },
+];
+
+export const seedProducts = () => {
+    products.forEach((product) => {
+      addDoc(collection(db, "products"), product);
+    });
+  };

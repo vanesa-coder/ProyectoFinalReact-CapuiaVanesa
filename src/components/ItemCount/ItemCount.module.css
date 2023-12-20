@@ -1,0 +1,19 @@
+.buttonCount{
+    font-size: 17px;
+    border-radius: 12px ;
+    border: 2px solid rgb(236, 80, 140);
+    height: 45px;
+    width: 160px;
+    text-align: center;  
+    margin-left: 20px;
+}
+.buttonC{
+    font-size: 17px;
+    border-radius: 10px ;
+    border: 2px solid rgb(236, 80, 140);
+    height: 45px;
+    width: 35px;
+    text-align: center;  
+    margin-left: 8px;
+    margin-right: 8px;
+}

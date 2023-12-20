@@ -1,0 +1,15 @@
+.bijouIvane{
+    width: 25rem;
+    margin-bottom: 50px;
+}
+
+.listProduct{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.itemProduct{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} 

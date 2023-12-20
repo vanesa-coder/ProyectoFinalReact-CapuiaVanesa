@@ -1,0 +1,29 @@
+.logo{
+    width: 9rem;
+}
+
+.itemCategorias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.categoria {
+    background-color: rgb(236, 80, 140);
+    font-size: 17px;
+    border-radius: 12px;
+    height: 45px;
+    width: 130px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    
+    text-align: center;
+}

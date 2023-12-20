@@ -1,0 +1,14 @@
+.itemCard{
+    border: 2px solid rgb(226, 222, 222);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.buttonDetail{
+    font-size: 17px;
+    border-radius: 12px ;
+    border: 2px solid rgb(236, 80, 140);
+    height: 45px;
+    width: 130px;
+    text-align: center;  
+}
