@@ -131,11 +131,11 @@ export const Form = ({ cartItems, total }) => {
                     <ul>
                         {orderInfo.items.map((item) => (
                             <li key={item.id}>
-                                {item.name} - {item.quantity} x ${item.price} = ${item.quantity * item.price}
+                                {item.name} - {item.quantity} x ${item.precio} = ${item.quantity * item.precio}
                             </li>
                         ))}
                     </ul>
-                    <b>Total de la compra: ${orderInfo.items.reduce((total, item) => total + item.quantity * item.price, 0)}</b>
+                    <b>Total de la compra: ${orderInfo.items.reduce((total, item) => total + item.quantity * item.precio, 0)}</b>
                 </div>
             )}
         </div>

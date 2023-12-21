@@ -17,6 +17,7 @@ export const ItemDetail = ({id, category, name, img, description, stock, precio}
         img,
         description,
         precio,
+        stock,
       }, items);
       console.log(items);
       Swal.fire({
