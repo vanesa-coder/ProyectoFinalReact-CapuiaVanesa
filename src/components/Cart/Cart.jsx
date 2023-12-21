@@ -8,10 +8,8 @@ import styles from "./Cart.module.css";
 export const Cart = () => {
 
   const navigate = useNavigate();
-  const {  totalCartItems, removeItem, updateItemQuantity, clearCartItems, cartItems } = useContext(CartContex);
+  const {totalCartItems, removeItem, updateItemQuantity, clearCartItems,cartItems } = useContext(CartContex);
   
-  // const cartItems = [{id:3, name:"cadena", precio:23, quantity:2, subTotal:56 }]
-  // const cartItems = [];
   const handleConfirmOrder = () => {
     if (cartItems.length === 0) {
       Swal.fire({
@@ -39,11 +37,11 @@ export const Cart = () => {
             <p>Cantidad: {item.quantity}</p>
             <p>Sub total: ${item.subTotal}</p>
             <div>
-              <button onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>Reducir</button>
-              <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>Incrementar</button>
+              <button  className="btn btn-danger m-2" onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>Quitar cantidad</button>
+              <button className="btn btn-success m-2" onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>Agregar cantidad</button>
             </div>
-            <button onClick={() => removeItem(item.id)}>
-              Eliminar
+            <button className="btn btn-outline-danger m-2" onClick={() => removeItem(item.id)}>
+              Eliminar los productos
             </button>
           </div>
         ))}

@@ -8,21 +8,21 @@ import Swal from 'sweetalert2';
 
 export const Item = ({id, name, img, description, precio, stock}) => {
     //agregar al carrito
-    const { addItem } = useCart();
-    const onAdd = (items) => {
-      addItem({
-        id,
-        name,
-        precio,
-      }, items);
+    // const { addItem } = useCart();
+    // const onAdd = (items) => {
+    //   addItem({
+    //     id,
+    //     name,
+    //     precio,
+    //   }, items);
 
-      Swal.fire({
-        icon: 'success',
-        title: 'Producto agregado al carrito',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    };
+    //   Swal.fire({
+    //     icon: 'success',
+    //     title: 'Producto agregado al carrito',
+    //     showConfirmButton: false,
+    //     timer: 1500,
+    //   });
+    // };
     
   return (
     <div className={styles.itemCard}>
@@ -33,8 +33,8 @@ export const Item = ({id, name, img, description, precio, stock}) => {
         <Link to={`/item/${id}`}>
           <button className={styles.buttonDetail} >Detalles</button>
         </Link>
-        <p><b>Precio:</b> $ {precio} </p>
-        <ItemCount stock={stock} onAdd={onAdd} />
+        {/* <p><b>Precio:</b> $ {precio} </p> */}
+        {/* <ItemCount stock={stock} onAdd={onAdd} /> */}
       </div>
     </div>
   )

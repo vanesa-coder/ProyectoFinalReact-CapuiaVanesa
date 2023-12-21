@@ -2,21 +2,23 @@ import { Link } from "react-router-dom";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useCart } from "../../contex/CartContex";
 import Swal from 'sweetalert2';
+import { Item } from "../Item/Item";
 
 
-export const ItemDetail = ({id, name, img, description, stock, precio}) => {
-    const { addItem } = useCart();
-
+export const ItemDetail = ({id, category, name, img, description, stock, precio}) => {
+    const {addItem }   = useCart();
+    
     //Agrega un producto al carrito
     const onAdd = (items) => {
       addItem({
         id,
+        category,
         name,
         img,
         description,
         precio,
       }, items);
-  
+      console.log(items);
       Swal.fire({
         icon: 'success',
         title: 'Producto agregado al carrito',

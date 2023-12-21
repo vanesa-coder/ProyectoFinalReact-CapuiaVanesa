@@ -1,6 +1,6 @@
 // import './App.css'
 import React from 'react';
-import { NavBar, ItemDetailContainer, ItemListContainer, Cart, } from "./components"
+import { NavBar, ItemDetailContainer, ItemListContainer, Cart, Order } from "./components"
 import { BrowserRouter,Routes, Route, } from "react-router-dom"
 import { CartContexProvider } from "./contex/CartContex"
 import { FirebaseContextProvider } from './contex/FirebaseContex';
@@ -18,6 +18,7 @@ function App() {
             <Route path="/category/:category" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/confirmar-compra" element={<Order/>} />
           </Routes>
         </CartContexProvider>
         </FirebaseContextProvider>
