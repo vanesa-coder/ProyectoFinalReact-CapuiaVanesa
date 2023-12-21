@@ -30,7 +30,7 @@ export const CartContexProvider = ( {children} ) => {
     const addItem = (item, quantity) => {
     const { id, category, img, name, description, precio, stock, } = item;
     const index = cartItems.findIndex((product) => product.id === id);
-
+    
     if (index !== -1) {
         const cartItemsCopy = [...cartItems];
         cartItemsCopy[index].quantity += quantity;

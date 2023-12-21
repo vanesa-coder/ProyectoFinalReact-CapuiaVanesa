@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import styles from "./Cart.module.css";
 
+
 export const Cart = () => {
 
   const navigate = useNavigate();
-  const { cartItems, totalCartItems, removeItem, updateItemQuantity } = useContext(CartContex);
+  const {  totalCartItems, removeItem, updateItemQuantity, clearCartItems, cartItems } = useContext(CartContex);
   
- 
+  // const cartItems = [{id:3, name:"cadena", precio:23, quantity:2, subTotal:56 }]
+  // const cartItems = [];
   const handleConfirmOrder = () => {
     if (cartItems.length === 0) {
       Swal.fire({
@@ -22,7 +24,9 @@ export const Cart = () => {
       navigate("/confirmar-compra");
     }
   };
-
+  const handleEmptyCart = () => {
+    clearCartItems()
+}
 
   return (
     <div className={styles.boxCarrito}>

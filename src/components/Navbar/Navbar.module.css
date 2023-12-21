@@ -15,10 +15,11 @@
     background-color: rgb(236, 80, 140);
     font-size: 17px;
     border-radius: 12px;
-    height: 45px;
-    width: 130px;
+    border: 2px solid rgb(236, 80, 140);;
+    height: 40px;
+    width: 110px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .links {
